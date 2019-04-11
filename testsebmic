@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercice 5</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/image1.jpg" id="image1" />
+      <img src="images/image2.jpg" id="image2" />
+      <img src="images/image3.jpg" id="image3" />
+      <img src="images/image4.jpg" id="image4" />
+      <img src="images/image5.jpg" id="image5" />
+    </div>
+
+    <script type="text/javascript">
+      document.addEventListener('mousemove', function()
+        {
+          // srcCible prends le src de la cible
+          var srcCible = event.target.src;
+          // Si les 6 derniers caractères ne correspondent (si ce n'est pas l'image alternatif)
+          if (srcCible.slice(-6) != "_2.jpg")
+          {
+            // On modifie le src pour qu'il fasse apparaitre l'image alt
+            event.target.src =  srcCible.replace(/.jpg/g, "_2.jpg");
+          }
+          // Tentative d'utilisation d'un switch case pour gérer chaque cas (abandonné pour le if)
+          // switch (srcCible)
+          // {
+          //   case 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image1.jpg':
+          //     image1.setAttribute("src", "file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image1_2.jpg");
+          //   break;
+          //   case 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image2.jpg':
+          //     event.target.src = 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image2_2.jpg';
+          //   break;
+          //   case 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image3.jpg':
+          //     event.target.src = 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image3_2.jpg';
+          //   break;
+          //   case 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image4.jpg':
+          //     event.target.src = 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image4_2.jpg';
+          //   break;
+          //   case 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image5.jpg':
+          //     event.target.src = 'file:///home/mickael/Exercice/ExerciceJS/Partie_2/Exercice_5/images/image5_2.jpg';
+          //     break;
+          //   default:
+          //   break;
+          // }
+        });
+    </script>
+  </body>
+</html>
